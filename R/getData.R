@@ -392,7 +392,7 @@ ccodes <- function() {
 	
 	f <- paste('srtm_', colTile, '_', rowTile, sep="")
 	zipfilename <- paste(path, "/", f, ".ZIP", sep="")
-	tiffilename <- paste(path, "/", f, ".TIF", sep="")
+	tiffilename <- paste(path, "/", f, ".tif", sep="")
 	
 	if (!file.exists(tiffilename)) {
 		if (!file.exists(zipfilename)) {
