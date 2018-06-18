@@ -397,13 +397,13 @@ ccodes <- function() {
 	if (!file.exists(tiffilename)) {
 		if (!file.exists(zipfilename)) {
 			if (download) { 
-				theurl <- paste("ftp://xftp.jrc.it/pub/srtmV4/tiff/", f, ".zip", sep="")
+				theurl <- paste("http://srtm.csi.cgiar.org/SRT-ZIP/SRTM_V41/SRTM_Data_GeoTiff/", f, ".zip", sep="")
 				test <- try (.download(theurl, zipfilename) , silent=TRUE)
 				if (class(test) == 'try-error') {
 					theurl <- paste("http://hypersphere.telascience.org/elevation/cgiar_srtm_v4/tiff/zip/", f, ".ZIP", sep="")
 					test <- try (.download(theurl, zipfilename) , silent=TRUE)
 					if (class(test) == 'try-error') {
-						theurl <- paste("http://srtm.csi.cgiar.org/SRT-ZIP/SRTM_V41/SRTM_Data_GeoTiff/", f, ".ZIP", sep="")
+						theurl <- paste("ftp://xftp.jrc.it/pub/srtmV4/tiff/", f, ".ZIP", sep="")
 						.download(theurl, zipfilename)
 					}
 				}
