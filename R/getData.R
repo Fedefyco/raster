@@ -397,7 +397,7 @@ ccodes <- function() {
 	if (!file.exists(tiffilename)) {
 		if (!file.exists(zipfilename)) {
 			if (download) { 
-				theurl <- paste("http://srtm.csi.cgiar.org/SRT-ZIP/SRTM_V41/SRTM_Data_GeoTiff/", f, ".ZIP", sep="")
+				theurl <- paste("http://srtm.csi.cgiar.org/wp-content/uploads/files/srtm_5x5/TIFF/", f, ".ZIP", sep="")
 				test <- try (.download(theurl, zipfilename) , silent=TRUE)
 				if (class(test) == 'try-error') {
 					theurl <- paste("http://hypersphere.telascience.org/elevation/cgiar_srtm_v4/tiff/zip/", f, ".ZIP", sep="")
